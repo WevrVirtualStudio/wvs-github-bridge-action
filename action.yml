@@ -1,0 +1,14 @@
+name: 'WVS Github Bridge'
+description: 'Sync a Github repo to WVS.io on push'
+inputs:
+  wvs-repo:  # id of input
+    description: 'WVS Repo URL'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time execution began'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.wvs-repo }}

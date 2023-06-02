@@ -30,11 +30,11 @@ The time this action ran.
 * Add your wvs personal access token to your Github secrets.  This can be done on the repo or at higher levels such as your organization: https://docs.github.com/en/actions/security-guides/encrypted-secrets
 
 ```yaml
-name: wvs-sync-action
-run-name: WVS Sync Action
+name: wvs-github-bridge-action
+run-name: WVS Bridge Action
 on: [push]
 jobs:
-  sync-to-wvs:
+  bridge-to-wvs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

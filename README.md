@@ -40,6 +40,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          lfs: 'true'
+          submodules: 'recursive'
       - uses: WevrVirtualStudio/wvs-github-bridge-action@main
         with:
           wvs-repo: 'https://wvs.io/<mygroup>/<myproject>.git'
